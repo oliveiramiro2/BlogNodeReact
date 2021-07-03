@@ -1,0 +1,30 @@
+{
+  "name": "blognodereact",
+  "version": "1.0.0",
+  "description": "treinando as ferramentas node e react na construcao de um blog",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/oliveiramiro2/BlogNodeReact.git"
+  },
+  "keywords": [
+    "node.js",
+    "react.js",
+    "node",
+    "react",
+    "watson"
+  ],
+  "author": "Ramiro Mares de Oliveira",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/oliveiramiro2/BlogNodeReact/issues"
+  },
+  "homepage": "https://github.com/oliveiramiro2/BlogNodeReact#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1"
+  }
+}
