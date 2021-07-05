@@ -12,6 +12,12 @@ class App extends Component {
       .then(resultado => {
         console.log(resultado)
       })
+
+    axios
+      .get('/comentarios/teste')
+      .then(resultado => {
+        console.log(resultado)
+      })
   }
 
   render(){

@@ -1,11 +1,22 @@
 const express = require('express')
 const router = express.Router()
+const db = require("./../db")
+const { conn } = require('./../db')
+
+
 
 router.get('/postagens', (req, res) => {
-    res.json({
-        titulo: 'Meu primeiro post',
-        conteudo: 'Primeira publicação',
-        autor: 'Ramiro Mares de Oliveira'
+
+    conn.query('SELECT * FROM postagem', (err, data) => {
+        if(err){
+            console.log(err)
+        }else{
+            res.send(data)
+        }
+    })
+
+    conn.close(() => {
+        console.log('banco fechado')
     })
 })
 
