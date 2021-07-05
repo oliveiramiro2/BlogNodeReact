@@ -1,23 +1,23 @@
 const express = require('express')
 const router = express.Router()
 const db = require("./../db")
-const { conn } = require('./../db')
-
-
 
 router.get('/postagens', (req, res) => {
 
-    conn.query('SELECT * FROM postagem', (err, data) => {
-        if(err){
-            console.log(err)
-        }else{
-            res.send(data)
-        }
-    })
+    (async () => {
+        const todasPostagens = await db.selectPostagens()
+        console.log(todasPostagens)
+    })()
+    
+})
 
-    conn.close(() => {
-        console.log('banco fechado')
-    })
+router.get('/postagens/nova', (req, res) => {
+    
+    (async () => {
+        const inserirPostagem = await db.insertPostagens(req.query.titulo, req.query.conteudo, req.query.autor)
+        console.log(inserirPostagem)
+    })()
+    
 })
 
 module.exports = router
