@@ -6,31 +6,33 @@ import {
 
 const HeaderBlog = props => {
     return (
-        <HeaderContainer
-    render={({ isSideNavExpanded, onClickSideNavExpand }) => (
-        <Header aria-label="IBM Platform Name">
-            <SkipToContent />
-            <HeaderMenuButton
-            aria-label="Open menu"
-            onClick={onClickSideNavExpand}
-            isActive={isSideNavExpanded}
+        <div className="header-blog">
+            <HeaderContainer
+                render={({ isSideNavExpanded, onClickSideNavExpand }) => (
+                    <Header aria-label="IBM Platform Name">
+                        <SkipToContent />
+                        <HeaderMenuButton
+                        aria-label="Open menu"
+                        onClick={onClickSideNavExpand}
+                        isActive={isSideNavExpanded}
+                        />
+                        <HeaderName href="#" prefix="Blog">
+                        - Faça sua publicação
+                        </HeaderName>
+                        <HeaderNavigation aria-label="IBM [Platform]">
+                        <HeaderMenuItem href="#">Link</HeaderMenuItem>
+                        <HeaderMenuItem href="#">Link</HeaderMenuItem>
+                        <HeaderMenuItem href="#">Link</HeaderMenuItem>
+                        <HeaderMenu aria-label="Link dropdown" menuLinkName="Link dropdown">
+                            <HeaderMenuItem href="#">Sub-link</HeaderMenuItem>
+                            <HeaderMenuItem href="#">Sub-link</HeaderMenuItem>
+                            <HeaderMenuItem href="#">Sub-link</HeaderMenuItem>
+                        </HeaderMenu>
+                        </HeaderNavigation>
+                    </Header>
+                )}
             />
-            <HeaderName href="#" prefix="Blog">
-             - Faça sua publicação
-            </HeaderName>
-            <HeaderNavigation aria-label="IBM [Platform]">
-            <HeaderMenuItem href="#">Link</HeaderMenuItem>
-            <HeaderMenuItem href="#">Link</HeaderMenuItem>
-            <HeaderMenuItem href="#">Link</HeaderMenuItem>
-            <HeaderMenu aria-label="Link dropdown" menuLinkName="Link dropdown">
-                <HeaderMenuItem href="#">Sub-link</HeaderMenuItem>
-                <HeaderMenuItem href="#">Sub-link</HeaderMenuItem>
-                <HeaderMenuItem href="#">Sub-link</HeaderMenuItem>
-            </HeaderMenu>
-            </HeaderNavigation>
-        </Header>
-        )}
-    />
+        </div>
     )
 }
 

@@ -2,9 +2,11 @@ import React from 'react'
 
 const FooterBlog = props => {
     return (
-        <footer>
-            <h2>Ramiro Mares de Oliveira</h2>
-        </footer>
+        <div className="footer-blog">
+            <footer>
+                <h2>Ramiro Mares de Oliveira</h2>
+            </footer>
+        </div>
     )
 }
 

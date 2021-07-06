@@ -6,6 +6,7 @@ import axios from 'axios'
 import HeaderBlog from './components/HeaderBlog'
 import FooterBlog from './components/FooterBlog'
 import SidebarBlog from './components/SidebarBlog'
+import ContentBlog from './components/ContentBlog'
 
 class App extends Component {
   constructor(props){
@@ -26,9 +27,10 @@ class App extends Component {
 
   render(){
     return (
-      <div className="App">
+      <div className="grid">
         <HeaderBlog />
         <SidebarBlog />
+        <ContentBlog />
         <FooterBlog />
       </div>
     );
