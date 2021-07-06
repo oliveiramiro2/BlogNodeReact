@@ -11,12 +11,15 @@ async function connection(){
 
 async function selectPostagens(){
     const conn = await connection()
-    return await conn.query('SELECT * FROM postagem;')
+    const [rows] = await conn.query('SELECT * FROM postagem;')
+    return rows
 }
 
-async function insertPostagens(titulo, conteudo, autor){
+async function insertPostagens(data){
     const conn = await connection()
-    return await conn.query(`INSERT INTO postagem (titulo_postagem, conteudo_postagem, autor_postagem) VALUES ('${titulo}', '${conteudo}', '${autor}');`)
+    const sql = 'INSERT INTO postagem (titulo_postagem, conteudo_postagem, autor_postagem) VALUES (?, ?, ?);'
+    const values = [data.titulo, data.conteudo, data.autor]
+    return await conn.query(sql, values)
 }
 
 module.exports = {selectPostagens, insertPostagens}

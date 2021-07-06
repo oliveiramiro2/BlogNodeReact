@@ -14,7 +14,9 @@ router.get('/postagens', (req, res) => {
 router.get('/postagens/nova', (req, res) => {
     
     (async () => {
-        const inserirPostagem = await db.insertPostagens(req.query.titulo, req.query.conteudo, req.query.autor)
+        const inserirPostagem = await db.insertPostagens(
+                {titulo: req.query.titulo, conteudo: req.query.conteudo, autor: req.query.autor}
+            )
         console.log(inserirPostagem)
     })()
     
