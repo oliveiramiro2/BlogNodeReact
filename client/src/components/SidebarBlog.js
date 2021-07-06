@@ -8,7 +8,7 @@ const SidebarBlog = props => {
             <SideNav
             isFixedNav
             expanded={true}
-            isChildOfHeader={false}
+            isChildOfHeader={true}
             aria-label="Side navigation">
             <SideNavItems>
                 <SideNavMenu title="L0 menu">

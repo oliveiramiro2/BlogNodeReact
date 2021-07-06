@@ -1,0 +1,34 @@
+.grid{
+    display: grid;
+    grid-template-columns: 25% auto;
+    grid-template-areas: 
+        "header-blog header-blog"
+        "sidebar-blog content-blog"
+        "footer-bar footer-bar"
+    ;
+}
+
+.header-blog {
+    grid-area: header-blog;
+}
+
+.sidebar-blog {
+    grid-area: sidebar-blog;
+    z-index: 1;
+}
+
+.content-blog {
+    grid-area: content-blog;
+    margin-left: -70px;
+    padding-top: 6%;
+}
+
+.footer-blog {
+    grid-area: footer-blog;
+    position: absolute;
+    bottom: 0;
+    padding-left: 35%;
+    background-color: aquamarine;
+    width: 100%;
+    z-index: 2;
+}
