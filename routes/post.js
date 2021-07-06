@@ -6,7 +6,7 @@ router.get('/postagens', (req, res) => {
 
     (async () => {
         const todasPostagens = await db.selectPostagens()
-        console.log(todasPostagens)
+        res.send(todasPostagens)
     })()
     
 })
@@ -14,10 +14,9 @@ router.get('/postagens', (req, res) => {
 router.get('/postagens/nova', (req, res) => {
     
     (async () => {
-        const inserirPostagem = await db.insertPostagens(
+        await db.insertPostagens(
                 {titulo: req.query.titulo, conteudo: req.query.conteudo, autor: req.query.autor}
             )
-        console.log(inserirPostagem)
     })()
     
 })
