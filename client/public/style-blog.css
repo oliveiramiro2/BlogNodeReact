@@ -1,3 +1,7 @@
+body {
+    background-image: url(fundo.jpg);
+}
+
 .grid{
     display: grid;
     grid-template-columns: 25% auto;
@@ -23,12 +27,34 @@
 .sidebar-blog {
     grid-area: sidebar-blog;
     z-index: 1;
+    width: 75%;
+    height: 127%;
+}
+
+.bx--side-nav__navigation{
+    width: 75%;
+    height: 86%;
 }
 
 .content-blog {
     grid-area: content-blog;
     margin-left: -70px;
     padding-top: 6%;
+    display: inline;
+}
+
+.col {
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+.card {
+    margin: 1%;
+}
+
+#col-cards {
+    display: grid;
+    grid-template-columns: 50% auto;
 }
 
 .footer-blog {
@@ -36,7 +62,7 @@
     position: fixed;
     bottom: 0;
     padding-left: 35%;
-    background-color: rgba(215, 252, 6, 0.178);
+    background-color: rgba(6, 203, 252, 0.178);
     width: 100%;
     z-index: 2;
 }

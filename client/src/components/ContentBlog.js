@@ -7,8 +7,9 @@ const ContentBlog = (props) => {
         <div className="content-blog">
             <Row>
                 <Col
-                    m={6}
+                    m={12}
                     s={12}
+                    id="#col-cards"
                 >
                     {props.posts.map(
                         (posts, id) =>
