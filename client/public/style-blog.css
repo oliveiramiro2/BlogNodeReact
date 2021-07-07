@@ -33,7 +33,7 @@
 
 .footer-blog {
     grid-area: footer-blog;
-    position: absolute;
+    position: fixed;
     bottom: 0;
     padding-left: 35%;
     background-color: rgba(215, 252, 6, 0.178);

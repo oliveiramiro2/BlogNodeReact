@@ -19,7 +19,7 @@ class App extends Component {
       .get('/postagens')
       .then(resultado => {
         this.setState({
-          resultado : resultado.data[0]
+          resultado : resultado.data
         })
       })
 
@@ -38,7 +38,7 @@ class App extends Component {
         <ContentBlog posts={this.state.resultado}/>
         <FooterBlog />
       </div>
-    );
+    )
   }
 }
 
