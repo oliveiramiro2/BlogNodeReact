@@ -12,9 +12,11 @@
     "carbon-components-react": "^7.38.0",
     "carbon-icons": "^7.0.7",
     "i": "^0.3.6",
+    "materialize": "^1.0.0",
     "npm": "^7.19.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
+    "react-materialize": "^3.9.8",
     "react-scripts": "4.0.3",
     "web-vitals": "^1.1.2"
   },

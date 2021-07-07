@@ -11,10 +11,16 @@ class App extends Component {
   constructor(props){
     super(props)
 
+    this.state = {
+      resultado : []
+    }
+
     axios
       .get('/postagens')
       .then(resultado => {
-        console.log(resultado)
+        this.setState({
+          resultado : resultado.data[0]
+        })
       })
 
     axios
@@ -29,7 +35,7 @@ class App extends Component {
       <div className="grid">
         <HeaderBlog />
         <SidebarBlog />
-        <ContentBlog />
+        <ContentBlog posts={this.state.resultado}/>
         <FooterBlog />
       </div>
     );

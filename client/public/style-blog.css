@@ -12,6 +12,14 @@
     grid-area: header-blog;
 }
 
+.bx--header__name {
+    width: 20%;
+}
+
+.bx--header__nav {
+    background-color: rgb(57, 183, 187);
+}
+
 .sidebar-blog {
     grid-area: sidebar-blog;
     z-index: 1;
@@ -28,7 +36,7 @@
     position: absolute;
     bottom: 0;
     padding-left: 35%;
-    background-color: aquamarine;
+    background-color: rgba(215, 252, 6, 0.178);
     width: 100%;
     z-index: 2;
 }
